@@ -26,6 +26,22 @@ class _HomePageState extends State<HomePage> {
                 child: Text("Menu",style: TextStyle(color: Colors.white,fontSize: 20),),
               ),
             ),
+            ListTile(
+              title: Text("Home"),
+              onTap: (){},
+            ),
+            ListTile(
+              title: Text("About"),
+              onTap: (){},
+            ),
+            ListTile(
+              title: Text("Contact"),
+              onTap: (){},
+            ),
+            ListTile(
+              title: Text("Exit"),
+              onTap: (){},
+            ),
           ],
         ),
       ),
