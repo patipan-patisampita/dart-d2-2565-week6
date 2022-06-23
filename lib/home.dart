@@ -9,6 +9,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _count = 0;
+
+  void initState(){
+    super.initState();
+    _count = 10+2;
+    debugPrint('count:$_count');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,6 +80,7 @@ class _HomePageState extends State<HomePage> {
         },
         child: Icon(Icons.add_alarm),
       ),
+
     );
   }
 }
