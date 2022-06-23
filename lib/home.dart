@@ -16,7 +16,12 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         title: Text("Flutter Basic"),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.delete)),
+          IconButton(onPressed: (){
+            setState((){
+              _count = 0;
+              debugPrint('count:$_count');
+            });
+          }, icon: Icon(Icons.delete)),
           IconButton(onPressed: (){}, icon: Icon(Icons.search)),
         ],
       ),
