@@ -21,9 +21,13 @@ class HomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          debugPrint("count:");
+        },
         child: Icon(Icons.add_alarm),
       ),
     );
   }
 }
+
+
