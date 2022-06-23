@@ -15,6 +15,10 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text("Flutter Basic"),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.delete)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.search)),
+        ],
       ),
       drawer: Drawer(
         child: Column(
