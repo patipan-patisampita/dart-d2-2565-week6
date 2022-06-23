@@ -71,14 +71,30 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState((){
-            _count ++;
-            debugPrint("count:$_count");
-          });
-        },
-        child: Icon(Icons.add_alarm),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              setState((){
+                _count ++;
+                debugPrint("count:$_count");
+              });
+            },
+            child: Icon(Icons.add_alarm),
+          ),
+          FloatingActionButton.extended(
+            onPressed: () {
+              setState((){
+                _count --;
+                debugPrint("count:$_count");
+              });
+            },
+            elevation: 4.0,
+            icon: Icon(Icons.remove),
+            label: Text("Down"),
+          ),
+        ],
       ),
 
     );
