@@ -16,6 +16,19 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         title: Text("Flutter Basic"),
       ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            SizedBox(
+              width: double.infinity,
+              child: DrawerHeader(
+                decoration: BoxDecoration(color: Colors.blue),
+                child: Text("Menu",style: TextStyle(color: Colors.white,fontSize: 20),),
+              ),
+            ),
+          ],
+        ),
+      ),
       body: Center(
         child: Text(
           "Count:$_count",
