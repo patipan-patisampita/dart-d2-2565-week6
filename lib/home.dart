@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +18,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          "Count:",
+          "Count:$_count",
           style: TextStyle(
             fontSize: 40,
             color: Colors.deepOrange,
@@ -22,7 +28,10 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          debugPrint("count:");
+          setState((){
+            _count ++;
+            debugPrint("count:$_count");
+          });
         },
         child: Icon(Icons.add_alarm),
       ),
