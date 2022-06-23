@@ -96,7 +96,19 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(onPressed: (){}, icon: Icon(Icons.menu,color: Colors.white)),
+            IconButton(onPressed: (){}, icon: Icon(Icons.person_add,color: Colors.white)),
+          ],
+        ),
+        shape: CircularNotchedRectangle(),
+        color: Colors.blue,
+      ),
     );
   }
 }
